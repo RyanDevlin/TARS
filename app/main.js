@@ -11,7 +11,7 @@ const {
 } = electron;
 
 // simple parameters initialization
-process.env.URL_LAUNCHER_URL = "https://www.youtube.com/embed/97g1krDkzNI?rel=0&autoplay=1&loop=1&playlist=97g1krDkzNI";
+//process.env.URL_LAUNCHER_URL = "https://www.youtube.com/embed/97g1krDkzNI?rel=0&autoplay=1&loop=1&playlist=97g1krDkzNI"; //F I R E  B O Y E
 const electronConfig = {
   URL_LAUNCHER_TOUCH: process.env.URL_LAUNCHER_TOUCH === '1' ? 1 : 0,
   URL_LAUNCHER_TOUCH_SIMULATE: process.env.URL_LAUNCHER_TOUCH_SIMULATE === '1' ? 1 : 0,
@@ -69,6 +69,7 @@ app.on('ready', () => {
 
   window.webContents.on('did-finish-load', () => {
     setTimeout(() => {
+      window.maximize()
       window.show();
     }, 300);
   });
