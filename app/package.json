@@ -19,8 +19,8 @@
     "js"
   ],
   "dependencies": {
-    "electron": "~1.6.16",
-    "electron-rebuild": "^1.7.2"
+    "electron": "~2.0.0-beta.8",
+    "electron-rebuild": "^2.0.0-beta.8"
   },
   "author": "Carlo Maria Curinga",
   "license": "Apache-2.0",
