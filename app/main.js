@@ -1,4 +1,4 @@
-// THIS IS THE TEST FILE
+// THIS IS THE ACTUAL FILE
 const electron = require('electron');
 const path = require('path');
 const url = require('url');
@@ -42,8 +42,8 @@ if (electronConfig.URL_LAUNCHER_TOUCH_SIMULATE) {
 if (process.env.NODE_ENV === 'development') {
     console.log('Running in development mode');
     Object.assign(electronConfig, {
-                  URL_LAUNCHER_HEIGHT: 600,
-                  URL_LAUNCHER_WIDTH: 800,
+                  URL_LAUNCHER_HEIGHT: 1080,
+                  URL_LAUNCHER_WIDTH: 1920,
                   URL_LAUNCHER_KIOSK: 0,
                   URL_LAUNCHER_CONSOLE: 1,
                   URL_LAUNCHER_FRAME: 1,
