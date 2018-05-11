@@ -145,7 +145,7 @@ for (;i<l;i++) {
 // -- Diagnostics Module -- //
 PiStats.getCPUInfo(function(err, data){
                    console.log("CPU_GET");
-                   //console.log("Current CPU Usage: " + data.percentUsed + "%");
+                   console.log("Current CPU Usage: " + data.percentUsed + "%");
                    // -- Added this to feed system data into mirror core.js -- //
                    });
 
@@ -154,9 +154,9 @@ var diagnostics = Diagnostics();
 setInterval(function() {
             var point = 0;
             PiStats.getCPUInfo(function(err, data){
-                               console.log("CPU_GET");
-                               //point = Math.random() * 100;
-                               point = data.percentUsed;
+                               //console.log("CPU_GET");
+                               point = Math.random() * 100;
+                               //point = data.percentUsed;
                                
                                diagnostics.cpu.append(Date.now(), point);
                                document.getElementById("cpu_load_text").innerHTML = "CPU: " + point.toFixed(2) + "%";
@@ -169,13 +169,13 @@ setInterval(function() {
 setInterval(function() {
             var point = 0;
             PiStats.getMemoryInfo(function(err, data){
-                                  console.log("MEM_GET");
+                                  //console.log("MEM_GET");
                                   //console.log("total\tused\tfree\tcached");
                                   //console.log( data.total + "\t" + data.used + "\t" + data.free + "\t" + data.cached );
                                   //console.log("Memory Usage:\t" + data.percentUsed + "%");
                                   
-                                  //point = Math.random() * 100;
-                                  point = data.percentUsed;
+                                  point = Math.random() * 100;
+                                  //point = data.percentUsed;
                                   diagnostics.mem.append(Date.now(), point);
                                   document.getElementById("mem_load_text").innerHTML = "MEM: " + point.toFixed(2) + "%";
                                   //document.getElementById("stat_window").innerHTML = test_data;
