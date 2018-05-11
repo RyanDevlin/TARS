@@ -265,13 +265,15 @@ var PiStats = function(){
     }
     
     var getMemoryInfo = function(cb){
-        fs.readFile('/proc/meminfo', 'utf8', function(err, data){
+        fs.readFileSync('/proc/meminfo', 'utf8', function(err, data){
+                    console.log("GETTING MEM INFO");
                     if(err){
                     cb(err);
                     return;
                     }
                     var lines = data.split('\n');
                     memInfo.total = Math.floor(getValFromLine(lines[0]) / 1024);
+                    console.log("MEMORY_TOTAL: " + memInfo.total);
                     memInfo.free = Math.floor(getValFromLine(lines[1]) / 1024);
                     memInfo.cached = Math.floor(getValFromLine(lines[3]) / 1024);
                     memInfo.used = memInfo.total - memInfo.free;
@@ -292,7 +294,7 @@ var PiStats = function(){
         lastCPUInfo.idle = currentCPUInfo.idle;
         lastCPUInfo.total = currentCPUInfo.total;
         
-        fs.readFile('/proc/stat', 'utf8', function(err, data){
+        fs.readFileSync('/proc/stat', 'utf8', function(err, data){
                     if(err){
                     if(cb !== undefined)
                     cb(err);

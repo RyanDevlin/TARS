@@ -31,12 +31,14 @@ var PiStats = function(){
     
     var getMemoryInfo = function(cb){
         fs.readFileSync('/proc/meminfo', 'utf8', function(err, data){
+                    console.log("GETTING MEM INFO");
                     if(err){
                     cb(err);
                     return;
                     }
                     var lines = data.split('\n');
                     memInfo.total = Math.floor(getValFromLine(lines[0]) / 1024);
+                    console.log("MEMORY_TOTAL: " + memInfo.total);
                     memInfo.free = Math.floor(getValFromLine(lines[1]) / 1024);
                     memInfo.cached = Math.floor(getValFromLine(lines[3]) / 1024);
                     memInfo.used = memInfo.total - memInfo.free;
