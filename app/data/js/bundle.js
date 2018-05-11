@@ -160,7 +160,7 @@ setInterval(function() {
                                //point = data.percentUsed;
                                point = Math.random() * 100;
                                
-                               //diagnostics.cpu.append(Date.now(), point);
+                               diagnostics.cpu.append(Date.now(), point);
                                document.getElementById("cpu_load_text").innerHTML = "CPU: " + point.toFixed(2) + "%";
                                //console.log("Current CPU Usage: " + data.percentUsed + "%");
                                // -- Added this to feed system data into mirror core.js -- //
@@ -319,16 +319,16 @@ var PiStats = function(){
     getCPUInfo: getCPUInfo,
     printMemoryInfo: function(){
         getMemoryInfo(function(err, data){
-                      //console.log("total\tused\tfree\tcached");
-                      //console.log( data.total + "\t" + data.used + "\t" + data.free + "\t" + data.cached );
-                      //console.log("Memory Usage:\t" + data.percentUsed + "%");
+                      console.log("total\tused\tfree\tcached");
+                      console.log( data.total + "\t" + data.used + "\t" + data.free + "\t" + data.cached );
+                      console.log("Memory Usage:\t" + data.percentUsed + "%");
                       // -- Added this to feed system data into mirror core.js -- //
                       //return("TEST");
                       });
     },
     printCPUInfo: function(){
         getCPUInfo(function(err, data){
-                   //console.log("Current CPU Usage: " + data.percentUsed + "%");
+                   console.log("Current CPU Usage: " + data.percentUsed + "%");
                    // -- Added this to feed system data into mirror core.js -- //
                    //return("TEST2");
                    });

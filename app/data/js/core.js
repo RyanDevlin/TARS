@@ -44,7 +44,7 @@ setInterval(function() {
                                //point = data.percentUsed;
                                point = Math.random() * 100;
                                
-                               //diagnostics.cpu.append(Date.now(), point);
+                               diagnostics.cpu.append(Date.now(), point);
                                document.getElementById("cpu_load_text").innerHTML = "CPU: " + point.toFixed(2) + "%";
                                //console.log("Current CPU Usage: " + data.percentUsed + "%");
                                // -- Added this to feed system data into mirror core.js -- //
