@@ -12,7 +12,8 @@
 // 469      65      404     31
 // Memory Usage:    7%
 
-var fs = require('fs');
+//var fs = require('fs');
+var fs = require('browserify-fs');
 
 var PiStats = function(){
     
@@ -83,20 +84,25 @@ var PiStats = function(){
     getCPUInfo: getCPUInfo,
     printMemoryInfo: function(){
         getMemoryInfo(function(err, data){
-                      console.log("total\tused\tfree\tcached");
-                      console.log( data.total + "\t" + data.used + "\t" + data.free + "\t" + data.cached );
-                      console.log("Memory Usage:\t" + data.percentUsed + "%");
+                      //console.log("total\tused\tfree\tcached");
+                      //console.log( data.total + "\t" + data.used + "\t" + data.free + "\t" + data.cached );
+                      //console.log("Memory Usage:\t" + data.percentUsed + "%");
+                      // -- Added this to feed system data into mirror core.js -- //
+                      //return("TEST");
                       });
     },
     printCPUInfo: function(){
         getCPUInfo(function(err, data){
-                   console.log("Current CPU Usage: " + data.percentUsed + "%");
+                   //console.log("Current CPU Usage: " + data.percentUsed + "%");
+                   // -- Added this to feed system data into mirror core.js -- //
+                   //return("TEST2");
                    });
     }
     };
 }();
-
 module.exports = PiStats;
 //PiStats.printMemoryInfo();
 //console.log("")
 //setInterval(PiStats.printCPUInfo, 1000);
+
+

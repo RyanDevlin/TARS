@@ -2,7 +2,7 @@
 const electron = require('electron');
 const path = require('path');
 const url = require('url');
-const PiStats = require('./data/js/py_stats.js');
+//const PiStats = require('./data/js/py_stats.js');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -88,11 +88,12 @@ app.on('ready', () => {
        // the big red button, here we go
        window.loadURL(electronConfig.URL_LAUNCHER_URL);
        
-       // Statistics Code
-       console.log("--TESTING NOW--");
-       PiStats.printMemoryInfo();
-       console.log("");
+       // Execute Application Logic
+       //console.log("--TESTING NOW--");
+       //PiStats.printMemoryInfo();
+       //console.log("");
        //setInterval(PiStats.printCPUInfo, 1000);
-       PiStats.printCPUInfo();
-       });
+       //PiStats.printCPUInfo();
+    
+});
 
