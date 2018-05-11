@@ -41,7 +41,7 @@ setInterval(function() {
             var point = 0;
             PiStats.getCPUInfo(function(err, data){
                                //console.log("CPU_GET");
-                               point = data.percentUsed;
+                               //point = data.percentUsed;
                                point = Math.random() * 100;
                                
                                //diagnostics.cpu.append(Date.now(), point);
