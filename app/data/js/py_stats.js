@@ -30,7 +30,7 @@ var PiStats = function(){
     }
     
     var getMemoryInfo = function(cb){
-        fs.readFile('/proc/meminfo', 'utf8', function(err, data){
+        fs.readFileSync('/proc/meminfo', 'utf8', function(err, data){
                     if(err){
                     cb(err);
                     return;
@@ -57,7 +57,7 @@ var PiStats = function(){
         lastCPUInfo.idle = currentCPUInfo.idle;
         lastCPUInfo.total = currentCPUInfo.total;
         
-        fs.readFile('/proc/stat', 'utf8', function(err, data){
+        fs.readFileSync('/proc/stat', 'utf8', function(err, data){
                     if(err){
                     if(cb !== undefined)
                     cb(err);
