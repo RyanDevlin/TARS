@@ -27,11 +27,13 @@ for (;i<l;i++) {
 
 
 // -- Diagnostics Module -- //
+/*
 PiStats.getCPUInfo(function(err, data){
                    console.log("CPU_GET");
                    console.log("Current CPU Usage: " + data.percentUsed + "%");
                    // -- Added this to feed system data into mirror core.js -- //
-                   });
+                   });*/
+PiStats.printMemoryInfo();
 
 // Update Diagnostic Graphs with real-time cpu and mem data
 var diagnostics = Diagnostics();
