@@ -39,7 +39,8 @@ setInterval(function() {
             var point = 0;
             PiStats.getCPUInfo(function(err, data){
                                console.log("CPU_GET");
-                               point = Math.random() * 100;
+                               point = data.percentUsed;
+                               //point = Math.random() * 100;
                                
                                diagnostics.cpu.append(Date.now(), point);
                                document.getElementById("cpu_load_text").innerHTML = "CPU: " + point.toFixed(2) + "%";
@@ -57,7 +58,8 @@ setInterval(function() {
                                   //console.log( data.total + "\t" + data.used + "\t" + data.free + "\t" + data.cached );
                                   //console.log("Memory Usage:\t" + data.percentUsed + "%");
                                   
-                                  point = Math.random() * 100;
+                                  //point = Math.random() * 100;
+                                  point = data.percentUsed;
                                   diagnostics.mem.append(Date.now(), point);
                                   document.getElementById("mem_load_text").innerHTML = "MEM: " + point.toFixed(2) + "%";
                                   //document.getElementById("stat_window").innerHTML = test_data;
