@@ -297,9 +297,11 @@ var PiStats = function(){
         console.log(" -- !TESTING FS! -- ");
         console.log(__filename);
         console.log(__dirname);
-        fs.readFile('./data/index.html', 'utf-8', function(err, data) {
+        console.log(fs.existsSync('/usr/src/app/'));
+        /*
+        fs.readFile('/usr/src/app/hello.txt', 'utf-8', function(err, data) {
                     console.log(data);
-        });
+        });*/
 
     };
     
