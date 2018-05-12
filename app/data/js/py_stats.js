@@ -12,8 +12,8 @@
 // 469      65      404     31
 // Memory Usage:    7%
 
-//var fs = require('fs');
-var fs = require('browserify-fs');
+var fs = require('fs');
+//var fs = require('browserify-fs');
 
 var PiStats = function(){
     
