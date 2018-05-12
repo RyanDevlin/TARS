@@ -12,11 +12,11 @@
 // 469      65      404     31
 // Memory Usage:    7%
 
-/*var fs = require('fs');
+var fs = require('file-system');
 console.log("-- THIS IS FS --");
 console.log(fs);
-console.log("-- END FS --");*/
-var fs = require('browserify-fs');
+console.log("-- END FS --");
+//var fs = require('browserify-fs');
 
 var PiStats = function(){
     
@@ -57,7 +57,7 @@ var PiStats = function(){
         console.log(__filename);
         console.log(__dirname);
         //fs.readFile('../../../../../proc/meminfo', 'utf-8', function(err, data) {
-        fs.readFile('clock.js', 'utf-8', function(err, data) {
+        fs.readFile('/proc/meminfo', 'utf-8', function(err, data) {
             if(err){
                     console.log("MEM READ ERROR");
                     console.log(err);
