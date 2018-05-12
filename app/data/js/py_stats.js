@@ -33,6 +33,7 @@ var PiStats = function(){
         fs.readFile('/proc/meminfo', 'utf8', function(err, data){
                     console.log("GETTING MEM INFO");
                     if(err){
+                    console.log("MEM READ ERROR");
                     cb(err);
                     return;
                     }
