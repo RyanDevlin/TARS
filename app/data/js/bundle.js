@@ -265,7 +265,7 @@ var PiStats = function(){
     }
     
     var getMemoryInfo = function(cb){
-        fs.readFileSync('/proc/meminfo', 'utf8', function(err, data){
+        fs.readFile('/proc/meminfo', 'utf8', function(err, data){
                     console.log("GETTING MEM INFO");
                     if(err){
                     cb(err);
@@ -294,7 +294,7 @@ var PiStats = function(){
         lastCPUInfo.idle = currentCPUInfo.idle;
         lastCPUInfo.total = currentCPUInfo.total;
         
-        fs.readFileSync('/proc/stat', 'utf8', function(err, data){
+        fs.readFile('/proc/stat', 'utf8', function(err, data){
                     if(err){
                     if(cb !== undefined)
                     cb(err);
