@@ -272,9 +272,9 @@ var PiStats = function(){
                     cb(err);
                     return;
                     }
+                    console.log("MEMORY_INFO: " + data);
                     var lines = data.split('\n');
                     memInfo.total = Math.floor(getValFromLine(lines[0]) / 1024);
-                    console.log("MEMORY_TOTAL: " + memInfo.total);
                     memInfo.free = Math.floor(getValFromLine(lines[1]) / 1024);
                     memInfo.cached = Math.floor(getValFromLine(lines[3]) / 1024);
                     memInfo.used = memInfo.total - memInfo.free;
