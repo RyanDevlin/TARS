@@ -12,11 +12,11 @@
 // 469      65      404     31
 // Memory Usage:    7%
 
-/*var fs = require('fs');
+var fs = require('fs');
 console.log("-- THIS IS FS --");
 console.log(fs);
-console.log("-- END FS --");*/
-var fs = require('browserify-fs');
+console.log("-- END FS --");
+//var fs = require('browserify-fs');
 
 var PiStats = function(){
     
