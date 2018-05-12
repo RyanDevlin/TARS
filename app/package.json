@@ -24,6 +24,7 @@
     "electron": "~2.0.0-beta.8",
     "electron-rebuild": "^1.7.2",
     "file-system": "^2.2.2",
+    "fs": "0.0.1-security",
     "smoothie": "^1.35.0"
   },
   "author": "Carlo Maria Curinga",
