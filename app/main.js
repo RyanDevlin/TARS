@@ -2,7 +2,7 @@
 const electron = require('electron');
 const path = require('path');
 const url = require('url');
-const PiStats = require('./data/js/py_stats.js');
+//const PiStats = require('./data/js/py_stats.js');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -90,7 +90,7 @@ app.on('ready', () => {
        
        // Execute Application Logic
        console.log("--TESTING NOW--");
-       PiStats.printMemoryInfo();
+       //PiStats.printMemoryInfo();
        //console.log("");
        //setInterval(PiStats.printCPUInfo, 1000);
        //PiStats.printCPUInfo();
