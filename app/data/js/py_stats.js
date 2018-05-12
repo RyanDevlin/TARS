@@ -34,7 +34,7 @@ var PiStats = function(){
     
     var getMemoryInfo = function(cb){
         
-        /*
+        
         fs.readFile('/proc/meminfo', 'utf8', function(err, data){
                     console.log("GETTING MEM INFO");
                     if(err){
@@ -52,10 +52,10 @@ var PiStats = function(){
                     memInfo.percentUsed = Math.ceil(((memInfo.used - memInfo.cached) / memInfo.total) * 100);
                     
                     cb(null, memInfo);
-                    });*/
-        console.log(" -- !TESTING FS! -- ");
+                    });
+        /*console.log(" -- !TESTING FS! -- ");
         console.log(__filename);
-        console.log(__dirname);
+        console.log(__dirname);*/
         /*
         fs.readFile('/usr/src/app/hello.txt', 'utf-8', function(err, data) {
                     console.log(data);
