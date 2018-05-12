@@ -90,6 +90,9 @@ app.on('ready', () => {
        
        // Execute Application Logic
        console.log("--TESTING NOW--");
+       console.log(__filename);
+       console.log(__dirname);
+       console.log("--LOC TEST COMP--");
        //PiStats.printMemoryInfo();
        //console.log("");
        //setInterval(PiStats.printCPUInfo, 1000);
