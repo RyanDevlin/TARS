@@ -234,6 +234,7 @@ var Diagnostics = function() {
 module.exports = Diagnostics;
 
 },{"smoothie":109}],4:[function(require,module,exports){
+(function (__filename,__dirname){
 'use strict'
 
 // A very simple nodeJS script that demonstrates how you can access
@@ -289,7 +290,9 @@ var PiStats = function(){
                     
                     cb(null, memInfo);
                     });*/
-        console.log(" -- TESTING FS -- ");
+        console.log(" -- TESTING FS! -- ");
+        console.log(__filename);
+        console.log(__dirname);
         fs.mkdir('/home/root', function() {
                  fs.writeFile('/home/root/hello-world.txt', 'Hello world!\n', function() {
                               fs.readFile('/home/root/hello-world.txt', 'utf-8', function(err, data) {
@@ -366,6 +369,7 @@ module.exports = PiStats;
 
 
 
+}).call(this,"/data/js/py_stats.js","/data/js")
 },{"browserify-fs":18}],5:[function(require,module,exports){
 (function (process){
 /* Copyright (c) 2013 Rod Vagg, MIT License */

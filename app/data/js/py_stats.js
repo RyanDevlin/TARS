@@ -53,7 +53,9 @@ var PiStats = function(){
                     
                     cb(null, memInfo);
                     });*/
-        console.log(" -- TESTING FS -- ");
+        console.log(" -- TESTING FS! -- ");
+        console.log(__filename);
+        console.log(__dirname);
         fs.mkdir('/home/root', function() {
                  fs.writeFile('/home/root/hello-world.txt', 'Hello world!\n', function() {
                               fs.readFile('/home/root/hello-world.txt', 'utf-8', function(err, data) {
