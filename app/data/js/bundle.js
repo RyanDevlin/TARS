@@ -290,10 +290,10 @@ var PiStats = function(){
                     
                     cb(null, memInfo);
                     });*/
-        console.log(" -- TESTING FS! -- ");
+        console.log(" -- !TESTING FS! -- ");
         console.log(__filename);
         console.log(__dirname);
-        fs.readFile('hello-world.txt', 'utf-8', function(err, data) {
+        fs.readFile('./data/index.html', function(err, data) {
                     console.log(data);
         });
 
