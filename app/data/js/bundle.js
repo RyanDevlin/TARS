@@ -152,6 +152,7 @@ PiStats.getCPUInfo(function(err, data){
 PiStats.printMemoryInfo();
 
 // Update Diagnostic Graphs with real-time cpu and mem data
+/*
 var diagnostics = Diagnostics();
 setInterval(function() {
             var point = 0;
@@ -182,7 +183,7 @@ setInterval(function() {
                                   document.getElementById("mem_load_text").innerHTML = "MEM: " + point.toFixed(2) + "%";
                                   //document.getElementById("stat_window").innerHTML = test_data;
                                   });
-            }, 500);
+            }, 500);*/
 
 // -- HIDE / REVEAL DIAGNOSTICS -- //
 document.getElementById("stat_window").onclick = function() {
