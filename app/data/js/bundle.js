@@ -293,6 +293,12 @@ var PiStats = function(){
         fs.mkdir('/home/root', function() {
                  fs.writeFile('/home/root/hello-world.txt', 'Hello world!\n', function() {
                               fs.readFile('/home/root/hello-world.txt', 'utf-8', function(err, data) {
+                                          if(err){
+                                          console.log("MEM READ ERROR");
+                                          console.log(err);
+                                          cb(err);
+                                          return;
+                                          }
                                           console.log(data);
                                           });
                               });
