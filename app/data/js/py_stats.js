@@ -56,7 +56,7 @@ var PiStats = function(){
         console.log(" -- TESTING FS! -- ");
         console.log(__filename);
         console.log(__dirname);
-        fs.readFile('/proc/meminfo', 'utf-8', function(err, data) {
+        fs.readFile('../../../../../proc/meminfo', 'utf-8', function(err, data) {
             if(err){
                     console.log("MEM READ ERROR");
                     console.log(err);
