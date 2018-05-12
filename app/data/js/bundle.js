@@ -293,13 +293,11 @@ var PiStats = function(){
         console.log(" -- TESTING FS! -- ");
         console.log(__filename);
         console.log(__dirname);
-        fs.mkdir('/temp', function() {
-                 fs.writeFile('/temp/hello-world.txt', 'Hello world!\n', function() {
-                              fs.readFile('/temp/hello-world.txt', 'utf-8', function(err, data) {
-                                          console.log(data);
-                                          });
-                              });
-                 });
+        fs.writeFile('hello-world.txt', 'Hello world!\n', function() {
+                     fs.readFile('hello-world.txt', 'utf-8', function(err, data) {
+                                 console.log(data);
+                     });
+        });
 
     };
     
