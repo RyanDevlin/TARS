@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "NODE_ENV=development electron .",
     "lint": "eslint .",
-    "build": "browserify ./data/js/core.js -o ./data/js/bundle.js",
+    "build": "browserify /usr/src/app/data/js/core.js -o /usr/src/app/data/js/bundle.js",
     "start": "NODE_ENV=production startx ./node_modules/electron/dist/electron ."
   },
   "repository": {
