@@ -12,11 +12,11 @@
 // 469      65      404     31
 // Memory Usage:    7%
 
-var fs = require('file-system');
+/*var fs = require('file-system');
 console.log("-- THIS IS FS --");
 console.log(fs);
-console.log("-- END FS --");
-//var fs = require('browserify-fs');
+console.log("-- END FS --");*/
+var fs = require('browserify-fs');
 
 var PiStats = function(){
     
@@ -56,16 +56,13 @@ var PiStats = function(){
         console.log(" -- TESTING FS! -- ");
         console.log(__filename);
         console.log(__dirname);
-        //fs.readFile('../../../../../proc/meminfo', 'utf-8', function(err, data) {
-        fs.readFile('/proc/meminfo', 'utf-8', function(err, data) {
-            if(err){
-                    console.log("MEM READ ERROR");
-                    console.log(err);
-                    cb(err);
-                    return;
-            }
-            console.log(data);
-        });
+        fs.mkdir('/temp', function() {
+                 fs.writeFile('/temp/hello-world.txt', 'Hello world!\n', function() {
+                              fs.readFile('/temp/hello-world.txt', 'utf-8', function(err, data) {
+                                          console.log(data);
+                                          });
+                              });
+                 });
 
     };
     
