@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "NODE_ENV=development electron .",
     "lint": "eslint .",
-    "build": "browserify /usr/src/app/data/js/core.js -o /usr/src/app/data/js/bundle.js",
+    "build": "browserify ./data/js/core.js -o ./data/js/bundle.js",
     "start": "NODE_ENV=production startx ./node_modules/electron/dist/electron ."
   },
   "repository": {
@@ -20,6 +20,7 @@
     "js"
   ],
   "dependencies": {
+    "browserify": "^16.2.2",
     "browserify-fs": "^1.0.0",
     "electron": "~2.0.0-beta.8",
     "electron-rebuild": "^1.7.2",

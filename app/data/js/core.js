@@ -2,7 +2,7 @@ const PiStats = require('./py_stats.js');
 const Clock = require('./clock.js');
 const Diagnostics = require('./diagnostics.js');
 const Smoothie = require('smoothie');
-cosnt os = require('os');
+const os = require('os');
 
 console.log(" -- HOME DIR --");
 console.log(os.homedir());
