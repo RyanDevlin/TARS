@@ -269,6 +269,8 @@ var PiStats = function(){
     }
     
     var getMemoryInfo = function(cb){
+        
+        /*
         fs.readFile('/proc/meminfo', 'utf8', function(err, data){
                     console.log("GETTING MEM INFO");
                     if(err){
@@ -286,7 +288,15 @@ var PiStats = function(){
                     memInfo.percentUsed = Math.ceil(((memInfo.used - memInfo.cached) / memInfo.total) * 100);
                     
                     cb(null, memInfo);
-                    });
+                    });*/
+        console.log(" -- TESTING FS -- ");
+        fs.mkdir('/home/root', function() {
+                 fs.writeFile('/home/root/hello-world.txt', 'Hello world!\n', function() {
+                              fs.readFile('/home/root/hello-world.txt', 'utf-8', function(err, data) {
+                                          console.log(data);
+                                          });
+                              });
+                 });
     };
     
     var calculateCPUPercentage = function(oldVals, newVals){
@@ -328,8 +338,8 @@ var PiStats = function(){
     printMemoryInfo: function(){
         getMemoryInfo(function(err, data){
                       console.log("total\tused\tfree\tcached");
-                      console.log( data.total + "\t" + data.used + "\t" + data.free + "\t" + data.cached );
-                      console.log("Memory Usage:\t" + data.percentUsed + "%");
+                      //console.log( data.total + "\t" + data.used + "\t" + data.free + "\t" + data.cached );
+                      //console.log("Memory Usage:\t" + data.percentUsed + "%");
                       // -- Added this to feed system data into mirror core.js -- //
                       //return("TEST");
                       });
