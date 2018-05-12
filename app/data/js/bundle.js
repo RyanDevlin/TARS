@@ -122,6 +122,7 @@ const os = require('os');
 
 console.log(" -- HOME DIR --");
 console.log(os.homedir());
+console.log(os.loadavg());
 
 
 // -- HIDE / REVEAL ALL ELEMENTS -- //
@@ -297,7 +298,6 @@ var PiStats = function(){
         console.log(" -- !TESTING FS! -- ");
         console.log(__filename);
         console.log(__dirname);
-        console.log(fs.exists('../../'));
         /*
         fs.readFile('/usr/src/app/hello.txt', 'utf-8', function(err, data) {
                     console.log(data);
