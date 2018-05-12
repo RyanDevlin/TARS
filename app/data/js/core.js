@@ -33,7 +33,7 @@ PiStats.getCPUInfo(function(err, data){
                    // -- Added this to feed system data into mirror core.js -- //
                    });*/
 console.log(" -- CALLING MEM INFO NOW -- ");
-PiStats.printMemoryInfo();
+//PiStats.printMemoryInfo();
 
 // Update Diagnostic Graphs with real-time cpu and mem data
 /*
