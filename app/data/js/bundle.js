@@ -248,6 +248,9 @@ module.exports = Diagnostics;
 // Memory Usage:    7%
 
 var fs = require('fs');
+console.log("-- THIS IS FS --");
+console.log(fs);
+console.log("-- END FS --");
 //var fs = require('browserify-fs');
 
 var PiStats = function(){
