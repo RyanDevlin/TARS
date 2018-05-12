@@ -3,6 +3,7 @@ const electron = require('electron');
 const path = require('path');
 const url = require('url');
 //const PiStats = require('./data/js/py_stats.js');
+const fs = require('fs');
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -97,6 +98,24 @@ app.on('ready', () => {
        //console.log("");
        //setInterval(PiStats.printCPUInfo, 1000);
        //PiStats.printCPUInfo();
+       fs.readFile('/proc/meminfo', 'utf8', function(err, data){
+                   console.log("GETTING MEM INFO");
+                   if(err){
+                   console.log("MEM READ ERROR");
+                   console.log(err);
+                   cb(err);
+                   return;
+                   }
+                   console.log("MEMORY_INFO: " + data);
+                   var lines = data.split('\n');
+                   memInfo.total = Math.floor(getValFromLine(lines[0]) / 1024);
+                   memInfo.free = Math.floor(getValFromLine(lines[1]) / 1024);
+                   memInfo.cached = Math.floor(getValFromLine(lines[3]) / 1024);
+                   memInfo.used = memInfo.total - memInfo.free;
+                   memInfo.percentUsed = Math.ceil(((memInfo.used - memInfo.cached) / memInfo.total) * 100);
+                   
+                   cb(null, memInfo);
+                   });
     
 });
 
