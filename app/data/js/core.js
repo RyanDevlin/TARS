@@ -6,7 +6,8 @@ const os = require('os');
 
 console.log(" -- HOME DIR --");
 console.log(os.homedir());
-console.log(os.loadavg());
+console.log(os.loadavg()[0]);
+console.log(" -- HOME DIR2 --");
 
 
 // -- HIDE / REVEAL ALL ELEMENTS -- //
