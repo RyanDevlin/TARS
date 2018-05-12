@@ -34,6 +34,7 @@ var PiStats = function(){
                     console.log("GETTING MEM INFO");
                     if(err){
                     console.log("MEM READ ERROR");
+                    console.log(err);
                     cb(err);
                     return;
                     }
