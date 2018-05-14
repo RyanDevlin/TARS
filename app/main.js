@@ -108,11 +108,6 @@ app.on('ready', () => {
                    }
                    console.log("MEMORY_INFO: " + data);
                    var lines = data.split('\n');
-                   memInfo.total = Math.floor(getValFromLine(lines[0]) / 1024);
-                   memInfo.free = Math.floor(getValFromLine(lines[1]) / 1024);
-                   memInfo.cached = Math.floor(getValFromLine(lines[3]) / 1024);
-                   memInfo.used = memInfo.total - memInfo.free;
-                   memInfo.percentUsed = Math.ceil(((memInfo.used - memInfo.cached) / memInfo.total) * 100);
                    
                    cb(null, memInfo);
                    });
