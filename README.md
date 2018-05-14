@@ -10,7 +10,7 @@
 
 ## What is this?
 
-This repository conatins the code for the TARS project; a fully customizable smart mirror. The mirror uses Resin.io to control handle code additions as well as remote control. The app itself is written in javascript with an html/css UI built on Electronjs.
+This repository conatins the code for the TARS project; a fully customizable smart mirror. The mirror uses Resin.io to handle code additions as well as remote control. The app itself is written in javascript with an html/css UI built on Electronjs.
 
 I created this project because I wanted to build what I envision as the perfect smart mirror. There are several publicly available libraries for smart mirrors, but none of these off the fleixiblity and full customization I desired. Feel free to build off of this code and/or modify it to create designs that suit you best.
 
