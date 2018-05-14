@@ -24,6 +24,9 @@ I created this project because I wanted to build what I envision as the perfect 
 
 ## Embeded code that is not mine
 
+Resin-Electronjs: Boilerplate code used to build initial container found here: [Resin-Electronjs](https://github.com/resin-io/resin-electronjs)
+
+
 Clock: A modified version a the design built by Rik Schennink found here: [Mother Flippin Clock](https://codepen.io/rikschennink/pen/lyuaf)
 
 Diagnostic Graphs: Courtesy of [Smoothie Charts](http://smoothiecharts.org/)
