@@ -1,7 +1,7 @@
 
 <h1 align="center">TARS Smart Mirror System</h1>
 <p align="center">
-  <b>A customizable smart mirror package to make your day brighter.</b><br>
+  <b>A customizable smart mirror to make your day brighter.</b><br>
 </p>
 
 <p align="center">
