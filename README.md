@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-    <img src="https://i.pinimg.com/originals/be/10/14/be101439e6f04c76afb7f52b6a41cce9.jpg" alt="TARS" width="400"/>
+    <img src="https://i.pinimg.com/originals/7e/11/0f/7e110f962fabee44b3fda7d13f70e678.jpg" alt="TARS" width="400"/>
 </p>
 
 ## What is this?
