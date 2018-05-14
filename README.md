@@ -26,7 +26,4 @@ I created this project because I wanted to build what I envision as the perfect 
 
 Clock: A modified version a the design built by Rik Schennink found here: [Mother Flippin Clock](https://codepen.io/rikschennink/pen/lyuaf)
 
-Diagnostic Graphs: Courtesy of [Smoothie Charts] (http://smoothiecharts.org/)
-
- 
-
+Diagnostic Graphs: Courtesy of [Smoothie Charts](http://smoothiecharts.org/)
